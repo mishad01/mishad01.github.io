@@ -5,60 +5,77 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="mishads_codefolio - Portfolio">
 
-  <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="mishads_codefolio">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
   <title>mishads_codefolio</title>
   <link rel="manifest" href="manifest.json">
 
-  <!-- 👇 Style for loading screen -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    body {
+      margin: 0;
+    }
+
     #loading {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
+      background-color: #000;
       display: flex;
-      background-color: white;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: sans-serif;
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-size: 50px;
       z-index: 9999;
-      transition: opacity 0.5s ease-out;
+      transition: opacity 0.6s ease-out;
     }
 
     #loading.fade-out {
       opacity: 0;
     }
+
+    /* Spinner */
+    .spinner {
+      border: 5px solid rgba(255, 255, 255, 0.1);
+      border-top: 5px solid #ffffff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 16px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
-  <!-- 👇 Custom loading screen -->
   <div id="loading">
+    <div class="spinner"></div>
     <h3>Loading portfolio...</h3>
   </div>
 
-  <!-- 👇 Remove loading after Flutter renders -->
   <script>
     window.addEventListener('flutter-first-frame', function () {
       const loader = document.getElementById('loading');
       if (loader) {
         loader.classList.add('fade-out');
-        setTimeout(() => loader.remove(), 500); // match transition time
+        setTimeout(() => loader.remove(), 600);
       }
     });
   </script>
 
-  <!-- 👇 Flutter bootstrap -->
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
