@@ -1,0 +1,1 @@
+var e=[`en`,`bn`],t=[`graduation`,`portrait`,`classes`,`office`,`project`];export{e as n,t};

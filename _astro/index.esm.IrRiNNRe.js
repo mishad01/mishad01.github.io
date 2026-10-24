@@ -1,0 +1,1 @@
+import{d as e,f as t}from"./index.esm.BFinDB2T.js";t(`firebase`,`13.1.0`,`app`);export{e as initializeApp};

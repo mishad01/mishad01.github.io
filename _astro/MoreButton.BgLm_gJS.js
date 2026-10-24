@@ -1,0 +1,1 @@
+import{s as e}from"./ui.CLlkyq3N.js";import{t}from"./jsx-runtime.CVFlYIZn.js";var n=t();function r({href:t,hidden:r,labels:i}){return(0,n.jsx)(e,{href:t,variant:`tonal`,trailingIcon:`arrow_forward`,className:`self-center`,children:`${i.loadMore} · ${r} ${i.more}`})}export{r as t};
